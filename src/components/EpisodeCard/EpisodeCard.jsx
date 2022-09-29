@@ -1,8 +1,8 @@
-import React from "react";
+import {memo} from "react";
 
 import styles from "./EpisodeCard.module.css";
 
-const EpisodeCard = ({ episode_id, title, season, episode, air_date }) => {
+const EpisodeCard = memo(({ episode_id, title, season, episode, air_date }) => {
 	return (
 		<div className={`${styles.cardModify} card col-10 col-md-5 col-xl-3`} id={episode_id}>
 			<div className="card-body">
@@ -16,6 +16,6 @@ const EpisodeCard = ({ episode_id, title, season, episode, air_date }) => {
 			<a href="#" className="card-link"> Подробнее... </a>
 		</div>
 	);
-};
+});
 
 export default EpisodeCard;

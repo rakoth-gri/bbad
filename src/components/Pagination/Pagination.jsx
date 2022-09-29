@@ -45,6 +45,3 @@ const Pagination = memo(({ length }) => {
 });
 
 export default Pagination;
-
-
-

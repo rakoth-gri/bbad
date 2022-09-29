@@ -24,4 +24,5 @@ footer {
 	background-color: var(--site-default-semantic-bg);
 	padding: var(--site-small-pd);
 	min-height: 8vh;
+	font-family: var(--site-menu-ff)
 }
