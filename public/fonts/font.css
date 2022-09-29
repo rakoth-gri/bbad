@@ -1,0 +1,56 @@
+/* текст */
+
+@font-face {
+    font-family: "Roboto";
+    src: url(./sourse/Roboto-Light.ttf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(./sourse/Roboto-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(./sourse/Roboto-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Заголовки */
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(./sourse/Montserrat-Italic-VariableFont_wght.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(./sourse/Montserrat-VariableFont_wght.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Меню и Header */
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url(./sourse/BebasNeue-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url(./sourse/UbuntuCondensed-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+

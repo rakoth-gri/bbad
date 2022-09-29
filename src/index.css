@@ -23,6 +23,10 @@
 	--site-medium-fs: 1.5rem;
 	--site-small-fs: 1.2rem;
 
+	--site-menu-ff: "Ubuntu";
+	--site-header-ff: "Montserrat";
+	--site-text-ff: "Roboto";
+
 	--site-small-pd: 1.5rem;
 
 	--site-small-mr: 1rem;
@@ -31,6 +35,10 @@
 	--site-default-spinnerShadow: 2px 2px 7px #ed0b0b;
 
 	--site-small-borderRadius: 10px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: var(--site-header-ff);
 }
 
 body {

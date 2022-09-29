@@ -1,0 +1,9 @@
+.header {
+	background-color: var(--site-default-semantic-bg);
+	min-height: 9vh;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	color: var(--site-default-color);
+	padding: var(--site-small-pd);    ;
+}

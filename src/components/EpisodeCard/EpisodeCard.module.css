@@ -1,0 +1,16 @@
+.cardModify {
+	margin: var(--site-small-mr);
+	background-color: var(--site-default-input-bg);
+	padding: var(--site-small-pd);
+	height: auto;
+    position: relative;
+    font-size: var(--site-small-fs);
+}
+
+
+
+
+.listModify {
+    background: none;
+    color: var(--site-default-color);
+}

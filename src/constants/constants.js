@@ -61,12 +61,12 @@ export const pagBtnsProps = { fontSize: "30px", cursor: "pointer"}
 export const selectArray = [
     {
         value: "",
-        text: "Без параметров"
+        text: "не выбрано"
     },
-    {
-        value: "episode_id",
-        text: "Эпизодам"
-    },
+    // {
+    //     value: "episode_id",
+    //     text: "Эпизодам"
+    // },
     {
         value: "season",
         text: "Сезонам"

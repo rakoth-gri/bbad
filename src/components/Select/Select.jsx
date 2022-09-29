@@ -15,22 +15,23 @@ const Select = memo(() => {
 	const dispatch = useDispatch();
 
 	const popup = useSelector((state) => state.episodesSliceReducer.popup);
-	const sort = useSelector((state) => state.episodesSliceReducer.sort);
+	const sortParams = useSelector((state) => state.episodesSliceReducer.sortParams);
 
 	const handleSelectChange = (value) => dispatch(changeSort(value));
 
 	return (
 		<>
 			<div className={styles.sort}>
-				<span onClick={() => dispatch(openPopup())}> Сортировать по: </span>
+				<span onClick={() => dispatch(openPopup())} className={styles.select}> Сортировать по: </span>
+				<span> {sortParams.text} </span>
 			</div>
 			<ul className={popup ? `${styles.popup} ${styles.active}` : styles.popup}>
 				{selectArray.map(({ value, text }) => (
 					<li
 						value={value}
 						key={value}
-						className={sort === value ? `${styles.selected} ${styles.popup_li}` : styles.popup_li}
-						onClick={() => handleSelectChange(value)}
+						className={sortParams.value === value ? `${styles.selected} ${styles.popup_li}` : styles.popup_li}
+						onClick={() => handleSelectChange({value,text})}
 					>
 						{" "}
 						{text}{" "}

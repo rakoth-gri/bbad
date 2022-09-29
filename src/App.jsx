@@ -3,8 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 // компоненты ------
-import Menu from "./components/Menu";
-import Logo from "./components/Logo/Logo";
+import Header from "./components/Header";
 
 // константы
 import { routes } from "./routing/routing";
@@ -12,10 +11,7 @@ import { routes } from "./routing/routing";
 function App() {
 	return (
 		<div className="App">
-			<header className="header">
-				<Logo/>
-				<Menu />
-			</header>
+			<Header/>
 			<main className='container'>
 				<Routes>
 					{routes.map((route) => (

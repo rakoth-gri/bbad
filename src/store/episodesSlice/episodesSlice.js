@@ -4,10 +4,8 @@ import { ServerConnection } from "../../services/serverConnection";
 // экспортируем, так как функцию будем диспатчить
 export const fetchingEpisodes = createAsyncThunk("episodes/fetchingEpisodes", async () => {
 	let data = await ServerConnection.fetchingEpisodes();
-	if (!data) {
-		console.log("Ошибка при запросе на сервер((");
-		return;
-	}
+	if (!data) 
+		return
 	return data;
 });
 
@@ -15,7 +13,7 @@ const initialState = {
 	episodes: [],
 	status: false,
 	error: "",
-	sort: "",
+	sortParams: {value: "", text: "не выбрано"},
 	popup: false,
 };
 
@@ -30,7 +28,7 @@ export const episodesSlice = createSlice({
 			state.popup = false;
 		},
         changeSort(state, action) {
-			state.sort = action.payload;
+			state.sortParams = action.payload;
 		},
 	},
 	extraReducers: {

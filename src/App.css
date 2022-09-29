@@ -4,27 +4,21 @@
 	color: var(--site-default-color);
 }
 
-.header {
-	background-color: var(--site-default-semantic-bg);
-	min-height: 6vh;
-	display: flex;
-	align-items: flex-start;
-	justify-content: flex-start;
-	color: var(--site-default-color);
-	padding: var(--site-small-pd);
-}
+/* Заголовок первого уровня на разных страницах сайта */
 
-/* Заголовок первого уровня */
 .header_1 {
 	color: var(--site-default-color);
 	text-transform: uppercase;
 	margin: var(--site-small-mr) 0px;
 }
 
+/* основная часть */
 main {
 	min-height: 84vh;
-	padding: var(--site-small-pd)
+	padding: var(--site-small-pd);
+	font-family: "Roboto";
 }
+
 
 footer {
 	background-color: var(--site-default-semantic-bg);
