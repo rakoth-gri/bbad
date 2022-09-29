@@ -1,0 +1,24 @@
+.active {
+	transform: scale(1.05);
+	animation: activeBtn 0.1s ease forwards;
+}
+
+@keyframes activeBtn {
+	from {
+		transform: scale(1);
+		color: var(--site-default-color);
+	}
+
+	to {
+		transform: scale(1.05);
+		color: var(--site-active-color);
+	}
+}
+
+.arrows {
+	outline: none;
+	background: none;
+	border: none;
+	font-size: 24px;
+	color: #0d6efd
+}

@@ -1,0 +1,14 @@
+/* тег section */
+.characters {
+	position: relative;
+}
+
+.flexContainer {
+	padding: 1%;
+  	min-height: 84vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+

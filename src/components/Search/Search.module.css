@@ -1,0 +1,31 @@
+.search {
+    height: 4rem;
+    position: relative;
+}
+
+.input {
+    border: none;
+    border-radius: var(--site-small-borderRadius);
+    background: var(--site-default-input-bg);
+    outline: none;
+    color: var(--site-default-color);
+    font-size: var(--site-small-fs);
+    min-height: 85%;
+    width: 90%;
+}
+
+.input::placeholder {
+    color: var(--site-active-color);
+    opacity: .7;
+    transition: 0.3s all linear;
+}
+
+
+.input:focus::placeholder {
+    opacity: .1;
+    transform: scale(0);    
+}
+
+.input:focus {    
+    box-shadow: 1px -1px 3px var(--site-active-color);
+}

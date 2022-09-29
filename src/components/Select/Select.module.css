@@ -1,0 +1,50 @@
+.sort {
+	text-align-last: right;
+}
+
+.sort span {
+	margin: 0px 3.2rem;
+	cursor: pointer;
+	transition: 0.2s all;
+}
+
+.sort span:hover {
+	color: var(--site-active-color);
+	transform: scale(1.05);
+}
+
+.popup {
+	list-style-position: inside;
+	list-style-type: none;
+	padding: 0;
+	width: 20%;
+	background-color: var(--site-default-semantic-bg);
+	padding: 10px;
+	border-radius: var(--site-small-borderRadius);
+	position: absolute;
+	top: 16%;
+	right: 2%;
+	display: none;
+	transition: 0.3s all ease;
+}
+
+.popup.active {
+	display: block;
+}
+
+.popup_li {
+	margin: 1rem;
+}
+
+.selected {
+	color: var(--site-active-color);
+}
+
+.popup_li::after {
+	content: "";
+	display: block;
+	height: 1px;
+	margin: 1px auto;
+	width: 90%;
+	background-color: var(--site-default-color);
+}

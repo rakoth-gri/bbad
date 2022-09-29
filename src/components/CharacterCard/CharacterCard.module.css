@@ -1,0 +1,22 @@
+.cardModify {
+	width: 30%;
+	margin: var(--site-small-mr);
+	background-color: var(--site-default-input-bg);
+	padding: var(--site-small-pd);
+	height: 550px;
+    position: relative;
+}
+
+.imgModify {
+	height: 75%;
+	object-fit: contain;
+	display: block;
+	border-radius: var(--site-small-borderRadius);
+    transition: 0.4s all linear;
+    filter: grayscale(60%)
+}
+
+.imgModify:hover {
+    transform: scale(1.05);
+    filter: none;
+}
