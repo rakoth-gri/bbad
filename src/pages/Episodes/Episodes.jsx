@@ -28,9 +28,7 @@ const Episodes = () => {
 	const episodes = useSelector((state) => state.episodesSliceReducer.episodes);
 	const sortValue = useSelector((state) => state.episodesSliceReducer.sortParams.value);
 
-	let sortedEpisodes = useMemo(() => {
-		console.log("memo");
-
+	let sortedEpisodes = useMemo(() => {		
 		switch (sortValue) {
 			case "air_date":
 				return episodes.slice(0).sort((a, b) => getTimeStamp(b[sortValue]) - getTimeStamp(a[sortValue]));
