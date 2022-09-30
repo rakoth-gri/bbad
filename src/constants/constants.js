@@ -62,11 +62,7 @@ export const selectArray = [
     {
         value: "",
         text: "не выбрано"
-    },
-    // {
-    //     value: "episode_id",
-    //     text: "Эпизодам"
-    // },
+    },    
     {
         value: "season",
         text: "Сезонам"

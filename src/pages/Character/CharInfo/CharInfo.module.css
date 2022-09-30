@@ -1,0 +1,33 @@
+h3 {
+	font-size: var(--site-big-fs);
+	font-weight: 400;
+	color: var(--site-active-color);
+}
+
+h4 {
+	font-size: var(--site-medium-fs);
+	font-weight: 400;
+	color: var(--site-active-color);
+}
+
+/* div биографии */
+.bio {
+	text-align: left;
+	height: 450px;
+}
+
+.bio span {
+	display: block;
+}
+
+.occupation__ul {
+	padding: 0px;
+	list-style-position: inside;
+	list-style-type: square;
+}
+
+b {
+	font-weight: 600;
+	opacity: 0.8;
+	color: var(--site-default-spinnerColor);
+}

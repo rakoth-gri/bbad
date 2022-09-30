@@ -1,0 +1,7 @@
+/* постер */
+.img img {
+	width: 80%;
+	border-radius: 10px;
+	height: 500px;
+	object-fit: cover;
+}

@@ -2,7 +2,7 @@ import { BASE_URL, CHARACTERS, EPISODES } from "../constants/api";
 import { limit } from "../constants/constants";
 
 export class ServerConnection {
-	// Персонажи
+	// Все Персонажи -------------------------------->>>>
 	static async fetchingChars(offset, search) {
 		try {
 			search = search.trim().toLowerCase();
@@ -17,7 +17,23 @@ export class ServerConnection {
 			return false;
 		}
 	}
-	// Эпизоды
+
+	// Конкретный персонаж -------------------------------->>>>
+	static async fetchingChar(id) {
+		try {
+			let res = await fetch(`${BASE_URL}${CHARACTERS}/${id}`)
+			if (!res.ok) {
+				console.log(res.error);
+				return false;
+			}
+			return await res.json()
+		} catch (err) {
+			console.log(err.message);
+			return false;
+		}
+	}
+
+	// Эпизоды -------------------------------->>>>
 	static async fetchingEpisodes() {
 		try {
 			
@@ -32,4 +48,6 @@ export class ServerConnection {
 			return false;
 		}
 	}
+	
+
 }

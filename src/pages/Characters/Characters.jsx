@@ -25,7 +25,7 @@ const Characters = memo(() => {
 		dispatch(fetchingCharacters({offset: (offset * limit), search}));
 	}, [offset, search]);
 
-	console.log(characters);
+	// console.log(characters);
 
 	return (
 		<section className={styles.characters}>

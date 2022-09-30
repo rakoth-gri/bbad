@@ -1,4 +1,10 @@
 .back {
-    text-align-last: left;
-    padding: var(--site-small-pd)
+	text-align-last: left;
+	padding: var(--site-small-pd);
 }
+
+.character {
+	position: relative;
+	font-family: var(--site-text-ff);
+}
+
