@@ -53,6 +53,7 @@ export const charactersSlice = createSlice({
 		},
 	},
 	extraReducers: {
+		// Все персонажи ---------->>>>
 		[fetchingCharacters.pending]: (state) => {
 			state.status = true;
 			state.error = "";
@@ -64,14 +65,12 @@ export const charactersSlice = createSlice({
 		[fetchingCharacters.rejected]: (state, action) => {
 			console.log(action.payload);
 		},
-
+		// Конкретный персонаж ---------->>>>
 		[fetchingCharacter.pending]: (state) => {
 			state.status = true;
 			state.error = "";
 		},
-		[fetchingCharacter.rejected]: (state, action) => {
-			
-		},
+		[fetchingCharacter.rejected]: (state, action) => {},
 	},
 });
 

@@ -5,7 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux/es/exports";
 
 // экшены
-import { fetchingCharacter } from "../../store/charactersSlice/charactersSlice";
+import { fetchingCharacter, setCharacter } from "../../store/charactersSlice/charactersSlice";
 
 import styles from "./Character.module.css";
 // константы
@@ -24,6 +24,7 @@ const Character = () => {
 
 	useEffect(() => {
 		id && dispatch(fetchingCharacter(id));
+		return () => dispatch(setCharacter(null));
 	}, []);
 
 	return (
