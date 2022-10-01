@@ -45,3 +45,8 @@ h1,h2,h3,h4,h5,h6 {
 body {
 	background-color: var(--site-default-bg);
 }
+
+section {
+	position: relative;
+	min-height: 84vh;
+}

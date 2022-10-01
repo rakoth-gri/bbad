@@ -3,8 +3,6 @@
 	padding: var(--site-small-pd);
 }
 
-.character {
-	position: relative;
+section {
 	font-family: var(--site-text-ff);
 }
-

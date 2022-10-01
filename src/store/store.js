@@ -1,8 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-// импортируем объект с редьюсерами
+// импортируем объект с редюсерами
 import { rootReducer } from "./reducers";
 
-const reducers = {reducer: rootReducer}
+// сервисы
+import { setToLS } from "../services/ls";
 
-export const store = configureStore(reducers)
+// константы
+import { favourites } from "./../constants/constants";
+
+export const store = configureStore({ reducer: rootReducer });
+
+// подписываемся на изменения в сторе по избранным персонам
+store.subscribe(() => {
+	let data = store.getState().favouriteSliceReducer.favouriteChars;
+	setToLS(favourites, data);
+});

@@ -3,12 +3,24 @@ import { limit } from "../constants/constants";
 
 export class ServerConnection {
 	// Все Персонажи -------------------------------->>>>
-	static async fetchingChars(offset, search) {
+	static async fetchingChars(offset) {
+		try {			
+			let res = await fetch(`${BASE_URL}${CHARACTERS}?limit=${limit}&offset=${offset}`);
+			if (!res.ok) {				
+				return false;
+			}
+			return await res.json();
+		} catch (err) {
+			console.log(err.message);
+			return false;
+		}
+	}
+	// поиск --------------------------------------->
+	static async fetchingSearch(search) {
 		try {
 			search = search.trim().toLowerCase();
-			let res = await fetch(`${BASE_URL}${CHARACTERS}?limit=${limit}&offset=${offset}&name=${search}`);
-			if (!res.ok) {
-				console.log(res.error);
+			let res = await fetch(`${BASE_URL}${CHARACTERS}?name=${search}`);
+			if (!res.ok) {				
 				return false;
 			}
 			return await res.json();

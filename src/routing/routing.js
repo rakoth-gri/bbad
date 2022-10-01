@@ -5,8 +5,7 @@ import Character from "../pages/Character";
 import Episodes from "../pages/Episodes";
 import About from "../pages/About";
 import NotFound from "../pages/NotFound";
-
-
+import SearchPage from "../pages/SearchPage";
 
 
 // создаем массив роутов
@@ -30,6 +29,10 @@ export const routes = [
     {
         path: "/about",
         component: About,
+    },
+    {
+        path: "/search",
+        component: SearchPage,
     },
     {
         path: "*",

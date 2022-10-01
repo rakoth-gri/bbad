@@ -46,7 +46,7 @@ const Episodes = () => {
 	}, []);
 
 	return (
-		<section className={styles.episodes} ref={ref}>
+		<section ref={ref}>
 			<h1 className="header_1"> Все эпизоды </h1>
 			<Select />
 			{!!sortedEpisodes.length ? (

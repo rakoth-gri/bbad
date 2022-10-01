@@ -28,7 +28,7 @@ const Character = () => {
 	}, []);
 
 	return (
-		<section className={styles.character}>
+		<section>
 			<div className={styles.back}>
 				<button type="button" className="btn btn-primary" onClick={() => location(-1)}>
 					&#8592; Вернуться назад

@@ -11,8 +11,8 @@ import { routes } from "./routing/routing";
 function App() {
 	return (
 		<div className="App">
-			<Header/>
-			<main className='container'>
+			<Header />
+			<main className="container">
 				<Routes>
 					{routes.map((route) => (
 						<Route path={route.path} element={<route.component />} key={route.path} />

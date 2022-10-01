@@ -2,14 +2,25 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { ServerConnection } from "../../services/serverConnection";
 
 // экспортируем, так как функцию будем диспатчить
-export const fetchingCharacters = createAsyncThunk("characters/fetchingCharacters", async ({ offset, search }) => {
-	let data = await ServerConnection.fetchingChars(offset, search);
+export const fetchingCharacters = createAsyncThunk("characters/fetchingCharacters", async ({ offset}) => {
+	let data = await ServerConnection.fetchingChars(offset);
 	if (!data) {
 		console.log("Ошибка при запросе на сервер((!");
 		return;
 	}
 	return data;
 });
+
+export const fetchingSearch = createAsyncThunk(
+	"characters/fetchingSearch",
+	async(search, {dispatch, rejectWithValue}) => {
+		let data = await ServerConnection.fetchingSearch(search)
+		if (!data) {
+			rejectWithValue("произошла ошибка запроса");
+		}
+		dispatch(setfetchingSearch(data))
+	}
+)
 
 export const fetchingCharacter = createAsyncThunk(
 	"characters/fetchingCharacter",
@@ -51,8 +62,20 @@ export const charactersSlice = createSlice({
 			state.status = false;
 			state.character = action.payload;
 		},
+		setfetchingSearch(state, action) {
+			state.status = false;
+			state.characters = action.payload;
+		},
 	},
 	extraReducers: {
+		// Поиск ---------->>>>
+		[fetchingSearch.pending]: (state) => {
+			state.status = true;
+			state.error = "";
+		},
+		[fetchingSearch.rejected]: (state, action) => {
+			console.log(action.payload);
+		},
 		// Все персонажи ---------->>>>
 		[fetchingCharacters.pending]: (state) => {
 			state.status = true;
@@ -75,6 +98,6 @@ export const charactersSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function:
-export const { setOffset, setOffsetPlus, setOffsetMinus, setSearch, setCharacter } = charactersSlice.actions;
+export const { setOffset, setOffsetPlus, setOffsetMinus, setSearch, setCharacter, setfetchingSearch} = charactersSlice.actions;
 
 export default charactersSlice.reducer;

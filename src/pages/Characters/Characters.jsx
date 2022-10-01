@@ -1,4 +1,4 @@
-import { useEffect, lazy, Suspense, memo} from "react";
+import { useEffect, lazy, Suspense, memo } from "react";
 import PulseLoader from "react-spinners/ClipLoader";
 import styles from "./Characters.module.css";
 
@@ -13,23 +13,21 @@ import { spinnerProps, limit } from "../../constants/constants";
 
 // компоненты
 import Pagination from "../../components/Pagination";
-import Search from "../../components/Search";
 const CharacterCard = lazy(() => import("../../components/CharacterCard"));
 
 const Characters = memo(() => {
 	const dispatch = useDispatch();
 
-	const {status, characters, offset, search} = useSelector((state) => state.characterSliceReducer);
-	
+	const { status, characters, offset } = useSelector((state) => state.characterSliceReducer);
+
 	useEffect(() => {
-		dispatch(fetchingCharacters({offset: (offset * limit), search}));
-	}, [offset, search]);
+		dispatch(fetchingCharacters({ offset: offset * limit }));
+	}, [offset]);
 
 	// console.log(characters);
 
 	return (
-		<section className={styles.characters}>
-			<Search/>
+		<section>
 			<PulseLoader
 				loading={status ? true : false}
 				cssOverride={spinnerProps}
@@ -37,10 +35,10 @@ const Characters = memo(() => {
 				color={spinnerProps.color}
 			/>
 			<h1 className="header_1"> Персонажи </h1>
-			{ !!characters.length &&
+			{!!characters.length && (
 				<>
 					<Pagination length={62} />
-					<div className={styles.flexContainer}>
+					<div className={`${styles.cardContainer} row`}>
 						{characters.map(({ name, char_id, img, nickname }) => {
 							const data = { name, char_id, img, nickname };
 							return (
@@ -51,7 +49,7 @@ const Characters = memo(() => {
 						})}
 					</div>
 				</>
-			}
+			)}
 		</section>
 	);
 });

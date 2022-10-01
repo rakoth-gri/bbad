@@ -20,6 +20,11 @@ export const menuLinks = [
         text: "о проекте",
         number: 3,
     },
+    {
+        to: "/search",
+        text: "поиск",
+        number: 4,
+    },
 ];
 
 // лимит для Пагинации -------->>
@@ -72,6 +77,17 @@ export const selectArray = [
         text: "По дате выхода"
     },
 ]
+
+// стиль иконок для избранных персонажей
+export const base = {fontSize: 'var(--site-big-fs)', position: 'absolute', top: "6%", right: "8%", zIndex: 10};
+
+{/* <RiStarSFill/>
+<RiStarSLine/> */}
+
+// ключ локального хранилища
+export const favourites = "favourites";
+
+
 
 /* <button className={styles.arrows} disabled={false} id="next" onClick={() => dispatch(setOffsetPlus())}>
 	вперед
