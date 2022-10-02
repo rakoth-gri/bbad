@@ -2,12 +2,14 @@
 	margin: var(--site-small-mr);
 	background-color: var(--site-default-input-bg);
 	padding: var(--site-small-pd);
-	height: 500px;
+	height: 530px;
     position: relative;
 }
 
 .imgModify {
-	height: 75%;
+	width: 90%;
+	margin: 0 auto;
+	height: 80%;
 	object-fit: cover;
 	display: block;
 	border-radius: var(--site-small-borderRadius);

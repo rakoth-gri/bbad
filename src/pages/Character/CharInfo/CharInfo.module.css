@@ -4,20 +4,20 @@ h3 {
 	color: var(--site-active-color);
 }
 
-h4 {
-	font-size: var(--site-medium-fs);
+
+/* контейнер информации с биографией */
+.bio {
+	text-align: left;
+	height: auto;	
+}
+
+h4 {	
 	font-weight: 400;
 	color: var(--site-active-color);
 }
 
-/* div биографии */
-.bio {
-	text-align: left;
-	height: 450px;
-}
-
 .bio span {
-	display: block;
+	display: block;	
 }
 
 .occupation__ul {
@@ -30,4 +30,21 @@ b {
 	font-weight: 600;
 	opacity: 0.8;
 	color: var(--site-default-spinnerColor);
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+	.bio {
+		font-size: var(--site-small-fs);		
+	}
+}
+
+@media screen and (max-width: 767.98px) {
+	.bio {
+		font-size: var(--site-small-fs);
+		text-align: center;
+	}
+
+	h3 {
+		font-size: var(--site-medium-fs);
+	}
 }

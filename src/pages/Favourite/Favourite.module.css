@@ -1,0 +1,6 @@
+.cardContainer {
+	padding: 1%;
+  	min-height: 84vh;	
+	justify-content: center;
+	align-items: center;
+}

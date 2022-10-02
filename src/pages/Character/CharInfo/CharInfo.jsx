@@ -11,13 +11,13 @@ const CharPoster = lazy(() => import("../CharPoster"));
 const CharInfo = ({ name, img, nickname, birthday, status, occupation, appearance, portrayed }) => {
 	return (
 		<article>
-			<h3> Имя персонажа: {name} </h3>
+			<h3> Имя: {name} </h3>
 			<div className={`row m-3 justify-content-center`}>
 				<Suspense fallback={<span> loading...</span>}>
 					<CharPoster img={img} />{" "}
 				</Suspense>
 
-				<div className={`${styles.bio} col-9 col-md-5 m-2`}>
+				<div className={`${styles.bio} col-11 col-md-5 m-2`}>
 					<h4 className="my-2"> Ник: {nickname} </h4>
 					<span className={`${styles.occupation} my-2`}> Род деятельности: </span>
 					<ul className={styles.occupation__ul}>

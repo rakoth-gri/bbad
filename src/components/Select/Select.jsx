@@ -22,7 +22,7 @@ const Select = memo(() => {
 	return (
 		<>
 			<div className={styles.sort}>
-				<span onClick={() => dispatch(openPopup())} className={styles.select}> Сортировать по: </span>
+				<span onClick={() => dispatch(openPopup())}> Сортировать по: </span>
 				<span> {sortParams.text} </span>
 			</div>
 			<ul className={popup ? `${styles.popup} ${styles.active}` : styles.popup}>

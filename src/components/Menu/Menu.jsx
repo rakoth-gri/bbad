@@ -6,13 +6,13 @@ import styles from "./Menu.module.css";
 // константы
 import { menuLinks } from "../../constants/constants.js";
 
-const Menu = memo(() => {
+const Menu = memo(({menuVisiable}) => {
 
 	const [isActive, setIsActive] = useState(0);
 
 	return (
 		<nav>
-			<ul>
+			<ul className={menuVisiable ? styles.active : ""}>
 				{menuLinks.map(({ to, text, number }) => {
 					return (
 						<NavLink

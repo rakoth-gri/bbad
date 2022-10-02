@@ -47,10 +47,10 @@ const Episodes = () => {
 
 	return (
 		<section ref={ref}>
-			<h1 className="header_1"> Все эпизоды </h1>
+			<h3> Все эпизоды </h3>
 			<Select />
 			{!!sortedEpisodes.length ? (
-				<div className={`row p-2 my-3 justify-content-center`}>
+				<div className={`row p-2 my-1 justify-content-center`}>
 					{sortedEpisodes.map((item) => (
 						<Suspense key={item.episode_id}>
 							<EpisodeCard {...item} />

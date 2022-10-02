@@ -1,5 +1,5 @@
 nav {
-	width: 40%;
+	width: 62%;
 }
 
 nav ul {
@@ -19,8 +19,37 @@ nav a {
 	font-weight: 500;
 }
 
+nav a:last-child {
+	text-decoration: none;
+	font-family: var(--site-menu-ff);
+	font-weight: 500;
+	color: var(--site-logo-color);
+	border: 2px solid var(--site-logo-color);
+	padding: 4px;
+}
+
 .activeLinks {
 	color: var(--site-active-color);
 	text-shadow: 2px 2px 6px rgb(223, 66, 14);
 }
 
+@media screen and (max-width: 991.98px) {
+	nav ul {
+		width: 40%;
+		flex-direction: column;
+		position: absolute;
+		top: 110%;
+		left: 3%;
+		background-color: var(--site-default-popover-bg);
+		padding: var(--site-small-pd);
+		z-index: 10;
+		border: 2px solid var(--site-active-color);
+		border-radius: 10px;
+		transform: translateX(-120%);
+		transition: 0.07s transform linear;
+	}
+
+	.active {
+		transform: translateX(0%);
+	}
+}

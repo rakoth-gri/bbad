@@ -1,3 +1,7 @@
+.paginateBtn {
+	font-size: var(--site--small-fs);
+}
+
 .active {
 	transform: scale(1.05);
 	animation: activeBtn 0.1s ease forwards;
@@ -8,7 +12,6 @@
 		transform: scale(1);
 		color: var(--site-default-color);
 	}
-
 	to {
 		transform: scale(1.05);
 		color: var(--site-active-color);
@@ -21,4 +24,20 @@
 	border: none;
 	font-size: 24px;
 	color: #0d6efd
+}
+
+/* медиа */
+@media (max-width: 575.98px) {
+	.pagintate {
+		padding: 0px!important;
+	}
+
+	.paginateBtn {
+		font-size: var(--site-smallest-fs);
+		margin: 0 3px!important;
+	}
+
+	.arrows {
+		font-size: 20px!important;
+	}
 }

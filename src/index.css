@@ -15,21 +15,25 @@
 	--site-default-popover-bg: rgb(41, 78, 102);
 	--site-default-input-bg: rgb(55, 54, 54);
 
+	/* Цвета */
 	--site-default-color: rgb(223, 210, 210);
 	--site-active-color: rgb(223, 178, 30);
 	--site-default-spinnerColor: #ae3a3a;
 	--site-logo-color: #a62626;
 
+	/* Размер шрифта */
 	--site-big-fs: 2.2rem;
 	--site-medium-fs: 1.5rem;
-	--site-small-fs: 1.2rem;
+	--site-small-fs: 1.1rem;
+	--site-smallest-fs: 0.8rem;
 
+	/* Шрифт */
 	--site-menu-ff: "Ubuntu";
 	--site-header-ff: "Montserrat";
 	--site-text-ff: "Roboto";
 
+	/* Отступы */
 	--site-small-pd: 1.5rem;
-
 	--site-small-mr: 1rem;
 
 	
@@ -50,3 +54,4 @@ section {
 	position: relative;
 	min-height: 84vh;
 }
+

@@ -44,8 +44,8 @@ const CharacterCard = memo(({ name, char_id, img, nickname }) => {
 				onMouseLeave={() => setPopoverVisible(false)}
 				loading="lazy"
 			/>
-			<div className="card-body">
-				<p className="card-text">{name}</p>
+			<div className="card-body p-2">
+				<p className="card-text mb-1">{name}</p>
 				<NavLink to={"/characters/" + char_id} className="btn btn-primary">
 					Подробнее...
 				</NavLink>

@@ -25,12 +25,12 @@ const Pagination = memo(({ length }) => {
 	}, [offset]);
 
 	return (
-		<article className="p-2">
-			<FcPrevious style={pagBtnsProps} onClick={() => dispatch(setOffsetMinus())} />
+		<article className={`p-2 ${styles.pagintate}`}>
+			<FcPrevious  className={styles.arrows} style={pagBtnsProps} onClick={() => dispatch(setOffsetMinus())} />
 			{btnArray.map((i) => {
 				return (
 					<button
-						className={`btn btn-dark mx-2 ${offset === i ? styles.active : ""}`}
+						className={`btn btn-dark mx-2 ${offset === i ? styles.active : ""} ${styles.paginateBtn}`}
 						onClick={() => btnClickHandler(i)}
 						key={i}
 					>
@@ -39,7 +39,7 @@ const Pagination = memo(({ length }) => {
 					</button>
 				);
 			})}
-			<FcNext style={pagBtnsProps} onClick={() => dispatch(setOffsetPlus())} />
+			<FcNext style={pagBtnsProps} className={styles.arrows} onClick={() => dispatch(setOffsetPlus())} />
 		</article>
 	);
 });

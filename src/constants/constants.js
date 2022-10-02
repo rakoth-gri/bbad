@@ -25,6 +25,11 @@ export const menuLinks = [
         text: "поиск",
         number: 4,
     },
+    {
+        to: "/favourite",
+        text: "избранное",
+        number: 5,
+    },
 ];
 
 // лимит для Пагинации -------->>
@@ -43,10 +48,22 @@ export const spinnerProps = {
 }
 
 // css для Logo -------->>
-export const logoProps = {
-    width: "90%",
+export const logoProps = {  
     fontSize: "40px",
     color: 'var(--site-logo-color)'
+}
+
+// css для BurgerICon -------->>
+export const burgerProps = {   
+    fontSize: "40px",
+    color: 'var(--site-active-color)'
+}
+
+// css для FavouriteCountIcon -------->>
+export const FavouriteCountProps = {   
+    fontSize: "40px",
+    color: 'var(--site-default-color)',
+    margin: "0 5px",
 }
 
 // css для Search icon -------->>
@@ -78,20 +95,18 @@ export const selectArray = [
     },
 ]
 
-// стиль иконок для избранных персонажей
-export const base = {fontSize: 'var(--site-big-fs)', position: 'absolute', top: "6%", right: "8%", zIndex: 10};
+// Иконка 'ЗВЕЗДА' для избранных персонажей
+export const base = {fontSize: 'var(--site-big-fs)', position: 'absolute', top: "6%", right: "11%", zIndex: 10};
 
-{/* <RiStarSFill/>
-<RiStarSLine/> */}
+// Иконки:  <RiStarSFill/> <RiStarSLine/> 
 
 // ключ локального хранилища
 export const favourites = "favourites";
 
 
-
-/* <button className={styles.arrows} disabled={false} id="next" onClick={() => dispatch(setOffsetPlus())}>
+/* <button className={styles.arrows} id="next" onClick={() => dispatch(setOffsetPlus())}>
 	вперед
 </button>;
-<button className={styles.arrows} id="previous" disabled={false} onClick={() => dispatch(setOffsetMinus())}>
+<button className={styles.arrows} id="previous" onClick={() => dispatch(setOffsetMinus())}>
 	назад
 </button>; */

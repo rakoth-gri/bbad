@@ -30,7 +30,7 @@ const Character = () => {
 	return (
 		<section>
 			<div className={styles.back}>
-				<button type="button" className="btn btn-primary" onClick={() => location(-1)}>
+				<button type="button" className={`btn btn-primary ${styles.btnModify}`} onClick={() => location(-1)}>
 					&#8592; Вернуться назад
 				</button>
 			</div>
