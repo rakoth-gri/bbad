@@ -16,9 +16,10 @@
 	margin: 0px 5px;
 }
 
-.sort span:hover {
+.sort span:first-child:hover {
 	color: var(--site-active-color);
-	transform: scale(1.01);
+	transform: scale(1.02);
+	cursor:pointer;
 }
 
 .popup {

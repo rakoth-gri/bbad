@@ -3,11 +3,15 @@ import { NavLink } from "react-router-dom";
 
 import styles from "./Menu.module.css";
 
+// хуки
+import { useSelector } from "react-redux/es/hooks/useSelector";
+
 // константы
 import { menuLinks } from "../../constants/constants.js";
 
-const Menu = memo(({menuVisiable}) => {
+const Menu = memo(() => {
 
+	const menuVisiable = useSelector(state => state.menuSliceReducer.menuVisiable)
 	const [isActive, setIsActive] = useState(0);
 
 	return (

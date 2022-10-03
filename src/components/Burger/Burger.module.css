@@ -15,5 +15,6 @@
     .GiHamburger {
         display: block;
         font-size: 30px!important;
+		margin: 0 5px;
     }
 } 

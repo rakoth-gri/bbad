@@ -36,7 +36,7 @@ const SearchPage = () => {
 				<BounceLoader
 					loading={status ? true : false}
 					cssOverride={spinnerProps}
-					size={100}
+					size={50}
 					color={spinnerProps.color}
 				/>
 				{!!searchedCharacters.length && search ? (

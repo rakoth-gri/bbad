@@ -28,7 +28,7 @@ const Search = memo(() => {
 
 	return (
 		<div className={`${styles.search} p-2 d-flex m-1 justify-content-center`}>
-			<FiRefreshCcw style={searchIconProps} onClick={() => setInputValue("")} />
+			<FiRefreshCcw style={searchIconProps} onClick={() => setInputValue("")} className={styles.searchIconProps}/>
 			<input
 				type="text"
 				placeholder="Search"

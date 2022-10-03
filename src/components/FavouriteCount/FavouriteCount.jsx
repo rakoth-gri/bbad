@@ -14,14 +14,18 @@ const FavouriteCount = memo(() => {
 
 	return (
 		<div className={`${styles.MdPersonDiv}`}>
-			<MdPerson
-				style={
-					favouriteChars.length
-						? { ...FavouriteCountProps, color: "var(--site-logo-color)" }
-						: FavouriteCountProps
-				}
-			/>
-			{favouriteChars.length ? favouriteChars.length : 0}
+			<div>
+				<MdPerson
+					style={
+						favouriteChars.length
+							? { ...FavouriteCountProps, color: "var(--site-logo-color)"}
+							: FavouriteCountProps
+					}
+					className={styles.MdPerson}
+				/>
+			</div>
+			<span>:</span>
+			<span className="fw-bolder">{favouriteChars.length ? favouriteChars.length : 0}</span>
 		</div>
 	);
 });

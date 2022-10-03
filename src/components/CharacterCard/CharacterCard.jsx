@@ -32,10 +32,11 @@ const CharacterCard = memo(({ name, char_id, img, nickname }) => {
 	return (
 		<div className={`card ${styles.cardModify} col-9 col-md-5 col-xl-3`} id={char_id}>
 			{popoverVisiable && <Popover {...popover} />}
-			<RiStarSLine
-				style={{ ...base, color: !favouriteChars ? "var(--site-active-color)" : "var(--site-logo-color)" }}
-				onClick={favourite}
-			/>
+			{favouriteChars ? (
+				<RiStarSFill style={{...base, color: "var(--site-logo-color)"}} onClick={favourite} />
+			) : (
+				<RiStarSLine style={{...base, color: "var(--site-active-color)"}} onClick={favourite} />
+			)}
 			<img
 				src={img}
 				className={`card-img-top ${styles.imgModify}`}

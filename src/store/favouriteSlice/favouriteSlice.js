@@ -1,17 +1,10 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice} from "@reduxjs/toolkit";
 
 // Сервисинг
 import { getFromLS } from "../../services/ls";
 
 // константы
 import { favourites } from "../../constants/constants";
-
-// export const fetchingEpisodes = createAsyncThunk("episodes/fetchingEpisodes", async () => {
-// 	let data = await ServerConnection.fetchingEpisodes();
-// 	if (!data)
-// 		return
-// 	return data;
-// });
 
 const initialState = {
 	favouriteChars: getFromLS(favourites),
@@ -27,6 +20,7 @@ export const favouriteSlice = createSlice({
 				return;
 			}
 			state.favouriteChars.push(payload);
+			// state.favouriteChars = [...state.favouriteChars, payload];
 		},
 	},
 	extraReducers: {},

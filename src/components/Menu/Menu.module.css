@@ -52,4 +52,30 @@ nav a:last-child {
 	.active {
 		transform: translateX(0%);
 	}
+
+	nav a::after {
+		content: "";
+		height: 2px;
+		width: 60%;
+		display: block;
+		margin: 1px auto;
+		background-color: var(--site-default-color);
+		opacity: 0.3;
+	}
+
+	nav a:last-child {
+		border: none;		
+	}
+}
+
+@media screen and (min-width: 767.98px) and (max-width: 991.98px) {
+	nav ul {
+		width: 33%;
+	}
+}
+
+@media screen and (max-width: 575.98px) {
+	nav ul {
+		width: 45%;
+	}
 }

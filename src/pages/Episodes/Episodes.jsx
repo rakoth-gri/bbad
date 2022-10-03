@@ -1,5 +1,5 @@
 import { useEffect, useRef, useMemo, Suspense, lazy } from "react";
-import PulseLoader from "react-spinners/ClipLoader";
+import PulseLoader from "react-spinners/PulseLoader";
 import styles from "./Episodes.module.css";
 
 // хуки
@@ -58,7 +58,7 @@ const Episodes = () => {
 					))}
 				</div>
 			) : (
-				<PulseLoader loading={true} cssOverride={spinnerProps} size={100} color={spinnerProps.color} />
+				<PulseLoader loading={true} cssOverride={spinnerProps} size={35} color={spinnerProps.color} />
 			)}
 		</section>
 	);

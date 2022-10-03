@@ -5,7 +5,7 @@ import styles from "./About.module.css";
 const About = () => {
 	return (
 		<>
-			<h1 className="header_1"> О Проекте </h1>
+			<h3> О Проекте </h3>
 		</>
 	);
 };

@@ -1,5 +1,5 @@
 import { useEffect, lazy, Suspense, memo } from "react";
-import PulseLoader from "react-spinners/ClipLoader";
+import PulseLoader from "react-spinners/PulseLoader";
 import styles from "./Characters.module.css";
 
 // хуки
@@ -31,7 +31,7 @@ const Characters = memo(() => {
 			<PulseLoader
 				loading={status ? true : false}
 				cssOverride={spinnerProps}
-				size={100}
+				size={35}
 				color={spinnerProps.color}
 			/>
 			<h1 className="header_1"> Персонажи </h1>

@@ -32,21 +32,25 @@ export const menuLinks = [
     },
 ];
 
+// ПАГИНАЦИЯ ----------------->>>>>>>>>>>>>>>>>
 // лимит для Пагинации -------->>
 export const limit = 9;
 
+// css для кнопок Пагинации  -------->>
+export const pagBtnsProps = { fontSize: "30px", cursor: "pointer"}
+
+// СПИННЕРЫ ----------------------------->>>>
 // css для Spinner  -------->>
 export const spinnerProps = {
     color: "var(--site-default-spinnerColor)",
     position: "absolute",
-    top: "50%",
+    top: "20%",
     left: "50%",
-    transform: 'translate(-50%, -50%)',
-    textShadow: "var(--site-default-spinnerShadow)",
-    border: "3px solid var(--site-default-spinnerColor)",
+    transform: 'translate(-50%, -50%)',   
     zIndex: 10,    
 }
 
+// ИКОНКИ ----------------------------->>>>
 // css для Logo -------->>
 export const logoProps = {  
     fontSize: "40px",
@@ -63,8 +67,11 @@ export const burgerProps = {
 export const FavouriteCountProps = {   
     fontSize: "40px",
     color: 'var(--site-default-color)',
-    margin: "0 5px",
+    display: "block",    
 }
+
+// css для иконки для избранных персонажей
+export const base = {fontSize: 'var(--site-big-fs)', position: 'absolute', top: "6%", right: "11%", zIndex: 10};
 
 // css для Search icon -------->>
 export const searchIconProps = {
@@ -76,15 +83,12 @@ export const searchIconProps = {
     cursor: "pointer"
 }
 
-// css для кнопок Пагинации  -------->>
-export const pagBtnsProps = { fontSize: "30px", cursor: "pointer"}
-
 // массив для кастомного селекта
 export const selectArray = [
     {
         value: "",
         text: "не выбрано"
-    },    
+    },       
     {
         value: "season",
         text: "Сезонам"
@@ -95,18 +99,22 @@ export const selectArray = [
     },
 ]
 
-// Иконка 'ЗВЕЗДА' для избранных персонажей
-export const base = {fontSize: 'var(--site-big-fs)', position: 'absolute', top: "6%", right: "11%", zIndex: 10};
-
 // Иконки:  <RiStarSFill/> <RiStarSLine/> 
 
 // ключ локального хранилища
 export const favourites = "favourites";
 
-
-/* <button className={styles.arrows} id="next" onClick={() => dispatch(setOffsetPlus())}>
-	вперед
-</button>;
-<button className={styles.arrows} id="previous" onClick={() => dispatch(setOffsetMinus())}>
-	назад
-</button>; */
+// AWARDS -------------------->>>>>
+// Main Page
+export const awards = [
+    "16 прайм-таймовых премий «Эмми»",
+    "два «Золотых глобуса»",
+    "пять премий Гильдии киноактёров США",
+    "шесть премий Гильдии сценаристов США",
+    "две премии Гильдии режиссёров Америки",
+    "две премии Гильдии продюсеров США",
+    "восемь премий «Спутник»",
+    "одна BAFTA",
+    "пять премий Ассоциации телевизионных критиков",
+    "шесть премий «Выбор телевизионных критиков»",
+]
