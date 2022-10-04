@@ -1,6 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { ServerConnection } from "../../services/serverConnection";
 
+
+
 // экспортируем, так как функцию будем диспатчить
 export const fetchingEpisodes = createAsyncThunk("episodes/fetchingEpisodes", async () => {
 	let data = await ServerConnection.fetchingEpisodes();
@@ -13,7 +15,7 @@ const initialState = {
 	episodes: [],
 	status: false,
 	error: "",
-	sortParams: {value: "", text: "не выбрано"},
+	sortParams: {value: null, text: "Сортировка:"},
 	popup: false,
 };
 

@@ -21,3 +21,7 @@
     transform: scale(1.05);
     filter: none;
 }
+
+.cardTextModify {
+	text-align: center;
+}

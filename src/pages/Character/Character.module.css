@@ -1,12 +1,3 @@
-.back {
-	text-align-last: left;
-	padding: var(--site-small-pd);
-}
-
-.btnModify {
-	font-size: var(--site-smallest-fs);
-}
-
 section {
 	font-family: var(--site-text-ff);
 }

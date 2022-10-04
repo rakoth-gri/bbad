@@ -26,6 +26,7 @@ const Episodes = () => {
 	const episodes = useSelector((state) => state.episodesSliceReducer.episodes);
 	const sortValue = useSelector((state) => state.episodesSliceReducer.sortParams.value);
 
+	// докальная сортировка
 	let sortedEpisodes = useMemo(() => {
 		switch (sortValue) {
 			case "air_date":
@@ -46,11 +47,11 @@ const Episodes = () => {
 	}, []);
 
 	return (
-		<section ref={ref}>
+		<section ref={ref}>			
 			<h3> Все эпизоды </h3>
 			<Select />
 			{!!sortedEpisodes.length ? (
-				<div className={`row p-2 my-1 justify-content-center`}>
+				<div className={`row p-2 justify-content-center`}>
 					{sortedEpisodes.map((item) => (
 						<Suspense key={item.episode_id}>
 							<EpisodeCard {...item} />

@@ -32,19 +32,15 @@ b {
 	color: var(--site-default-spinnerColor);
 }
 
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-	.bio {
+@media screen and (max-width: 991.98px) {
+	.bio, .bio ul, .bio p {
 		font-size: var(--site-small-fs);		
 	}
 }
 
 @media screen and (max-width: 767.98px) {
-	.bio {
-		font-size: var(--site-small-fs);
-		text-align: center;
-	}
-
 	h3 {
 		font-size: var(--site-medium-fs);
 	}
+	
 }

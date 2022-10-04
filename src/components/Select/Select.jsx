@@ -1,5 +1,5 @@
 import { memo } from "react";
-
+import { BsChevronDoubleDown } from "react-icons/bs";
 import styles from "./Select.module.css";
 
 // хуки
@@ -22,22 +22,26 @@ const Select = memo(() => {
 	return (
 		<>
 			<div className={styles.sort}>
-				<span onClick={() => dispatch(openPopup())}> Сортировать по: </span>
-				<span> {sortParams.text} </span>
+				<span onClick={() => dispatch(openPopup())}>
+					{!sortParams.value ? "Сортировать:" : sortParams.text}
+					<BsChevronDoubleDown style={{ margin: "0px 7px" }} />
+				</span>
+				<ul className={popup ? `${styles.popup} ${styles.active}` : styles.popup}>
+					{selectArray.map(({ value, text }) => (
+						<li
+							value={value}
+							key={value}
+							className={
+								sortParams.value === value ? `${styles.selected} ${styles.popup_li}` : styles.popup_li
+							}
+							onClick={() => handleSelectChange({ value, text })}
+						>
+							{" "}
+							{text}{" "}
+						</li>
+					))}
+				</ul>
 			</div>
-			<ul className={popup ? `${styles.popup} ${styles.active}` : styles.popup}>
-				{selectArray.map(({ value, text }) => (
-					<li
-						value={value}
-						key={value}
-						className={sortParams.value === value ? `${styles.selected} ${styles.popup_li}` : styles.popup_li}
-						onClick={() => handleSelectChange({value,text})}
-					>
-						{" "}
-						{text}{" "}
-					</li>
-				))}
-			</ul>
 		</>
 	);
 });

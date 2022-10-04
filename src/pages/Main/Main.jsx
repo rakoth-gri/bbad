@@ -1,9 +1,9 @@
 import { lazy, Suspense } from "react";
-
+import ClockLoader from "react-spinners/ClockLoader";
 import styles from "./Main.module.css";
 
 // константы
-import { awards } from "../../constants/constants";
+import { awards, spinnerProps } from "../../constants/constants";
 
 // компоненты
 const Poster = lazy(() => import("../../components/Poster"));
@@ -12,7 +12,7 @@ const Main = () => {
 	return (
 		<>
 			<h1 className={`${styles.header_1} my-3`}> Проект "Во все тяжкие" </h1>
-			<Suspense fallback={<span> loading...</span>}>
+			<Suspense fallback={<ClockLoader style={spinnerProps}/>}>
 				<Poster />
 			</Suspense>
 

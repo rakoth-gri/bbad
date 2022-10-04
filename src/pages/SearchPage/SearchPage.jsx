@@ -1,20 +1,19 @@
 import { useEffect, lazy, Suspense } from "react";
 import BounceLoader from "react-spinners/BounceLoader";
-
+import styles from "./SearchPage.module.css";
 // хуки
 import { useDispatch, useSelector } from "react-redux";
 
 // экшены
 import { fetchingSearch } from "../../store/charactersSlice/charactersSlice";
 
-// компоненты
-import Search from "../../components/Search";
-import CharacterCard from "../../components/CharacterCard";
-
 // константы
 import { spinnerProps } from "../../constants/constants";
 
-import styles from "./SearchPage.module.css";
+// компоненты
+import Search from "../../components/Search";
+import BtnBack from "../../components/BtnBack";
+const CharacterCard = lazy(() => import("../../components/CharacterCard"));
 
 const SearchPage = () => {
 	const dispatch = useDispatch();
@@ -27,10 +26,9 @@ const SearchPage = () => {
 		dispatch(fetchingSearch(search));
 	}, [search]);
 
- 
 	return (
 		<>
-      
+			<BtnBack />
 			<Search />
 			<section>
 				<BounceLoader

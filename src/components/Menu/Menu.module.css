@@ -44,7 +44,8 @@ nav a:last-child {
 		padding: var(--site-small-pd);
 		z-index: 10;
 		border: 2px solid var(--site-active-color);
-		border-radius: 10px;
+		align-items: center;
+		border-radius: 0 0 10px 10px;
 		transform: translateX(-120%);
 		transition: 0.07s transform linear;
 	}
@@ -53,18 +54,26 @@ nav a:last-child {
 		transform: translateX(0%);
 	}
 
+	nav a {
+		font-size: var(--site-small-fs);
+	}
+
 	nav a::after {
 		content: "";
 		height: 2px;
-		width: 60%;
+		width: 90%;
 		display: block;
 		margin: 1px auto;
 		background-color: var(--site-default-color);
 		opacity: 0.3;
 	}
 
+	nav a:last-child::after {
+		display: none;		
+	}
+
 	nav a:last-child {
-		border: none;		
+		border: none;
 	}
 }
 

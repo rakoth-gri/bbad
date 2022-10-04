@@ -13,7 +13,7 @@ const Favourite = () => {
 
 	return (
 		<>
-			<h3>Favourite</h3>
+			<h3> Избранные персонажи: </h3>
 			<div className={`${styles.cardContainer} row`}>
 				{favouriteChars.length ? (
 					favouriteChars.map((fav) => <CharacterCard {...fav} key={fav.char_id} />)

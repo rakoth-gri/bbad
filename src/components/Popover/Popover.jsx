@@ -5,8 +5,8 @@ import styles from "./Popover.module.css"
 const Popover = ({title, nickname}) => {
   return (
     <article className={styles.popover}>
-        <h5 className={styles.title}> {title}</h5>
-        <p className={styles.nickname}> {nickname} </p>
+        <span className={styles.title}> {title}:</span>
+        <span className={styles.nickname}> {nickname} </span>
     </article>
   )
 }

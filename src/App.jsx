@@ -2,9 +2,6 @@ import { useRef, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
-// компоненты ------
-import Header from "./components/Header";
-
 // хуки
 import { useDispatch } from "react-redux";
 
@@ -13,6 +10,10 @@ import { setMenuInvisiable } from "./store/menuSlice/menuSlice";
 
 // константы
 import { routes } from "./routing/routing";
+
+// компоненты ------
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
 	const ref = useRef(null);
@@ -25,9 +26,6 @@ function App() {
 		});
 	}, []);
 
-	// Burger_burgerDiv__FCe2D
-	// Burger_GiHamburger__c3mps
-
 	return (
 		<div className="App" ref={ref}>
 			<Header />
@@ -38,7 +36,7 @@ function App() {
 					))}
 				</Routes>
 			</main>
-			<footer>Footer моего сайта</footer>
+			<Footer/>
 		</div>
 	);
 }

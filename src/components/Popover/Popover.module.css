@@ -1,19 +1,30 @@
 .popover {
 	position: absolute;
 	top: 15%;
-	right: -24%;
-	width: 40%;
+	right: 0%;
+	width: auto;
 	height: auto;
 	font-size: 18px;
 	z-index: 10;
-	border-radius: 0 10px 10px 0;
+	text-align: left;
+	background-color: var(--site-default-popover-bg);
+	padding: 10px;
+	border-radius: 0px 0px 10px 10px; 	
 }
 
 .title,
+.nickname {	
+	margin: 0px;	
+	padding: 5px;	
+}
+
 .nickname {
-	border: 1px solid rgb(194, 184, 184);
-	margin: 0px;
-	border-radius: 0 10px 10px 0;
-	padding: 5px;
-	background-color: var(--site-default-popover-bg);
+	border-radius: 0 0px 10px 10px;
+}
+
+
+@media screen and (max-width: 1199.98px) {
+	.popover {
+		right: 0%
+	}
 }

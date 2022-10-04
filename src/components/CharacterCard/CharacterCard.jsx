@@ -27,15 +27,15 @@ const CharacterCard = memo(({ name, char_id, img, nickname }) => {
 
 	const favourite = useCallback((e) => dispatch(toFavourite({ name, char_id, img, nickname })), []);
 
-	const popover = useMemo(() => ({ title: "NickName", nickname }), []);
+	const popover = useMemo(() => ({ title: "Nick", nickname }), []);
 
 	return (
 		<div className={`card ${styles.cardModify} col-9 col-md-5 col-xl-3`} id={char_id}>
 			{popoverVisiable && <Popover {...popover} />}
 			{favouriteChars ? (
-				<RiStarSFill style={{...base, color: "var(--site-logo-color)"}} onClick={favourite} />
+				<RiStarSFill style={{ ...base, color: "var(--site-logo-color)" }} onClick={favourite} />
 			) : (
-				<RiStarSLine style={{...base, color: "var(--site-active-color)"}} onClick={favourite} />
+				<RiStarSLine style={{ ...base, color: "var(--site-active-color)" }} onClick={favourite} />
 			)}
 			<img
 				src={img}
@@ -46,7 +46,7 @@ const CharacterCard = memo(({ name, char_id, img, nickname }) => {
 				loading="lazy"
 			/>
 			<div className="card-body p-2">
-				<p className="card-text mb-1">{name}</p>
+				<p className={`card-text my-1 ${styles.cardTextModify}`}>{name}</p>
 				<NavLink to={"/characters/" + char_id} className="btn btn-primary">
 					Подробнее...
 				</NavLink>
