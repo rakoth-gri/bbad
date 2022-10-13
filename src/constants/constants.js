@@ -29,7 +29,7 @@ export const menuLinks = [
 		to: "/favourite",
 		text: "избранное",
 		number: 5,
-	},
+	},	
 ];
 
 // ПАГИНАЦИЯ ----------------->>>>>>>>>>>>>>>>>
@@ -103,6 +103,7 @@ export const selectArray = [
 
 // ключ локального хранилища
 export const favourites = "favourites";
+export const authKey = "auth";
 
 // AWARDS -------------------->>>>>
 // Main Page

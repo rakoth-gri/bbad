@@ -7,6 +7,7 @@ import About from "../pages/About";
 import NotFound from "../pages/NotFound";
 import SearchPage from "../pages/SearchPage";
 import Favourite from "../pages/Favourite";
+import LogIn from "../pages/LogIn";
 
 // создаем массив роутов
 export const routes = [
@@ -39,7 +40,13 @@ export const routes = [
 		component: Favourite,
 	},
 	{
+		path: "/login",
+		component: LogIn,
+	},
+	{
 		path: "*",
 		component: NotFound,
 	},
 ];
+
+

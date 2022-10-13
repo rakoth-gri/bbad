@@ -8,3 +8,9 @@
 	padding: var(--site-small-pd);
 	position: relative;
 }
+
+@media screen and (max-width: 991.98px) {
+	.header {
+		justify-content: space-around;
+	}	
+}

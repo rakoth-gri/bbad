@@ -1,9 +1,9 @@
 .MdPersonDiv {
-	width: 10%;
+	width: 13%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-left: auto;
+	/* margin-left: auto; */
 	font-size: 40px;
 }
 
@@ -14,11 +14,14 @@
 
 span {
 	margin: 0 3px;
+	font-size: var(--site-medium-fs);
 }
+
 
 @media screen and (max-width: 767.98px) {
 	.MdPersonDiv {
-		font-size: 30px;		
+		font-size: 30px;
+		/* margin-left: 30px;		 */
 	}
 	.MdPerson {
 		font-size: 30px !important;

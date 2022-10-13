@@ -34,6 +34,10 @@ nav a:last-child {
 }
 
 @media screen and (max-width: 991.98px) {
+	nav {
+		width: 0%;
+	}
+
 	nav ul {
 		width: 40%;
 		flex-direction: column;
@@ -69,7 +73,7 @@ nav a:last-child {
 	}
 
 	nav a:last-child::after {
-		display: none;		
+		display: none;
 	}
 
 	nav a:last-child {

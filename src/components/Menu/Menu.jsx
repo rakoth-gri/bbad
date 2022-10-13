@@ -1,4 +1,4 @@
-import {useState, memo} from "react";
+import { useState, memo } from "react";
 import { NavLink } from "react-router-dom";
 
 import styles from "./Menu.module.css";
@@ -10,8 +10,9 @@ import { useSelector } from "react-redux/es/hooks/useSelector";
 import { menuLinks } from "../../constants/constants.js";
 
 const Menu = memo(() => {
+	const menuVisiable = useSelector((state) => state.menuSliceReducer.menuVisiable);
+	const auth = useSelector((state) => state.authSliceReducer.auth);
 
-	const menuVisiable = useSelector(state => state.menuSliceReducer.menuVisiable)
 	const [isActive, setIsActive] = useState(0);
 
 	return (

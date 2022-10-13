@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 // хуки
-import { useDispatch } from "react-redux";
+import { useDispatch} from "react-redux";
 
 // экшены menuSLice
 import { setMenuInvisiable } from "./store/menuSlice/menuSlice";
@@ -17,11 +17,11 @@ import Header from "./components/Header";
 
 function App() {
 	const ref = useRef(null);
-	const dispatch = useDispatch();
+	const dispatch = useDispatch();	
 
 	// используем Dom-Api
 	useEffect(() => {
-		ref.current?.addEventListener("click", (e) => {					
+		ref.current?.addEventListener("click", (e) => {
 			if (!e.target.closest("div.Burger_burgerDiv__FCe2D")) dispatch(setMenuInvisiable());
 		});
 	}, []);
@@ -36,7 +36,7 @@ function App() {
 					))}
 				</Routes>
 			</main>
-			<Footer/>
+			<Footer />
 		</div>
 	);
 }

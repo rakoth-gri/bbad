@@ -1,0 +1,41 @@
+.auth {
+	width: 21%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.logInControls {
+	font-size: 14px;
+}
+
+.auth a {
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+.user {
+	font-size: var(--site-small-fs);
+}
+
+@media screen and (max-width: 991.98px) {
+	.auth {
+		width: 35%;
+	}
+
+	.logInControls {
+		width: 100%;
+	}
+
+	.user {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 575.98px) {
+	.auth {
+		width: 58%;
+	}
+
+	
+}
