@@ -25,7 +25,7 @@ const FavouriteCount = memo(() => {
 				/>
 			</div>
 			<span>:</span>
-			<span className="fw-bolder">{favouriteChars.length ? favouriteChars.length : 0}</span>
+			<span className={`fw-bolder ${styles.favouriteCountSpan}`}>{favouriteChars.length ? favouriteChars.length : 0}</span>
 		</div>
 	);
 });

@@ -21,7 +21,7 @@ const Comments = memo(({ id }) => {
 						<h5 className={`card-title ${styles.cardTitleModify}`}>
 							{user} <strong> {date}</strong>
 						</h5>
-						<p className="card-text">{message}</p>
+						<p className={`card-text ${styles.cardTextModify}`}>{message}</p>
 
 						<div className={styles.commentsCardButtonWrap}>
 							<button

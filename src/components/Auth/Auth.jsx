@@ -32,7 +32,7 @@ const Auth = memo(() => {
 	return (
 		<div className={styles.auth}>
 			{auth ? (
-				<button className={`btn btn-danger ${styles.logInControls}`} to="/" onClick={logout}>
+				<button className={`btn btn-danger ${styles.logInControls}`} onClick={logout}>
 					{" "}
 					LOG OUT{" "}
 				</button>

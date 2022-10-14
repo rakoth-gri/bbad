@@ -12,9 +12,9 @@
 	top: -5px;
 }
 
-span {
+.favouriteCountSpan {
 	margin: 0 3px;
-	font-size: 30px;
+	font-size: 40px;
 }
 
 
@@ -26,5 +26,9 @@ span {
 	.MdPerson {
 		font-size: 30px !important;
 		display: block;			
+	}
+	.favouriteCountSpan {
+		margin: 0 3px;
+		font-size: 30px;
 	}		
 }

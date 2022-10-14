@@ -28,9 +28,7 @@ const commentForm = memo(({id}) => {
 
 	return (
 		<form className={`${styles.commentForm}`} onSubmit={handleSubmit}>
-            <legend> Комментарий: </legend>
-			<div className="mb-3">				
-			</div>
+            <legend> Комментарий: </legend>			
 			<div className="mb-3">
 				<textarea
 					type="password"

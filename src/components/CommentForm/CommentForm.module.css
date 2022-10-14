@@ -3,9 +3,9 @@
 	margin: var(--site-big-mr);
 	text-align: left;
 	padding: var(--site-small-pd);
+	text-align: center;
 }
 
-.inputComment,
 .textAreaComment,
 .btnComment {
 	width: 70%;
@@ -14,4 +14,23 @@
 	resize: vertical;
 	font-family: var(--site-text-ff);
 	font-size: var(--site-small-fs);
+}
+
+@media screen and (max-width: 991.98px) {
+	.commentForm {
+		width: 100%;
+		margin: 0px;		
+	}
+
+	.textAreaComment {
+		margin: 0 auto;
+		height: 55px;
+	}
+
+	.btnComment {
+		padding: 0px;		
+		text-align: center;		
+		height: 40px;
+		line-height: 40px;		
+	}
 }

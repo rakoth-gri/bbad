@@ -1,34 +1,61 @@
 .comments {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    /* padding: var(--site-small-pd); */
-    margin: var(--site-big-mr);
-    min-height: auto;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	/* padding: var(--site-small-pd); */
+	margin: var(--site-big-mr);
+	min-height: auto;
 }
 
 .commentsCard {
-    background-color: var(--site-default-input-bg);
-    flex: 1 1 400px;
-    margin: var(--site-small-mr);
-    
+	background-color: var(--site-default-input-bg);
+	flex: 1 1 400px;
+	margin: var(--site-small-mr);
 }
 
 .cardBodyModify {
-    text-align: left;
+	text-align: left;
 }
 
 .cardTitleModify {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .commentsCardButtonWrap {
-    text-align: right;
+	text-align: right;
 }
 
 .commentsCardButton {
-    width: 18%;    
+	width: 18%;
+}
+
+/* МЕДИА */
+
+@media screen and (max-width: 991.98px) {
+	.comments {
+		margin: var(--site-small-mr);
+	}
+
+	.cardTextModify,
+	.cardTitleModify {
+		font-size: var(--site-small-fs);
+	}
+
+	.commentsCardButton {
+		width: 20%;
+	}
+}
+
+@media screen and (max-width: 575.98px) {
+	.commentsCardButton {
+		width: 35%;
+	}
+
+	.cardTextModify,
+	.cardTitleModify {
+		font-size: 15px;
+	}
 }
