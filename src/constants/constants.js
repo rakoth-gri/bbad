@@ -104,6 +104,7 @@ export const selectArray = [
 // ключ локального хранилища
 export const favourites = "favourites";
 export const authKey = "auth";
+export const commentsStore = "commentsStore";
 
 // AWARDS -------------------->>>>>
 // Main Page

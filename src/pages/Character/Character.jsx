@@ -13,6 +13,8 @@ import { spinnerProps } from "../../constants/constants";
 // компоненты
 import CharInfo from "./CharInfo";
 import BtnBack from "../../components/BtnBack";
+import CommentForm from "../../components/CommentForm";
+import Comments from "../../components/Comments";
 
 const Character = () => {
 	const { char_id: id } = useParams();
@@ -36,6 +38,8 @@ const Character = () => {
 				color={spinnerProps.color}
 			/>
 			{character && <CharInfo {...character} />}
+			<CommentForm id={id}/>
+			<Comments id={id}/>
 		</section>
 	);
 };

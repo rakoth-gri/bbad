@@ -1,0 +1,17 @@
+.commentForm {
+	width: 70%;
+	margin: var(--site-big-mr);
+	text-align: left;
+	padding: var(--site-small-pd);
+}
+
+.inputComment,
+.textAreaComment,
+.btnComment {
+	width: 70%;
+	/* margin: 0 auto; */
+	padding: 0.75rem;
+	resize: vertical;
+	font-family: var(--site-text-ff);
+	font-size: var(--site-small-fs);
+}

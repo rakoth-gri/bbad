@@ -35,6 +35,8 @@
 	/* Отступы */
 	--site-small-pd: 1.5rem;
 	--site-small-mr: 1rem;
+	--site-medium-mr: 2rem;
+	--site-big-mr: 3rem;
 
 	
 	--site-default-spinnerShadow: 2px 2px 7px #ed0b0b;

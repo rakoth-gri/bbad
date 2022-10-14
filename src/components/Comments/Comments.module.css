@@ -1,0 +1,34 @@
+.comments {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* padding: var(--site-small-pd); */
+    margin: var(--site-big-mr);
+    min-height: auto;
+}
+
+.commentsCard {
+    background-color: var(--site-default-input-bg);
+    flex: 1 1 400px;
+    margin: var(--site-small-mr);
+    
+}
+
+.cardBodyModify {
+    text-align: left;
+}
+
+.cardTitleModify {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commentsCardButtonWrap {
+    text-align: right;
+}
+
+.commentsCardButton {
+    width: 18%;    
+}
