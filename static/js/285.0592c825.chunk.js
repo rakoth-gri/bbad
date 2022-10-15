@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkbbad=self.webpackChunkbbad||[]).push([[285],{6285:function(a,c,n){n.r(c),n.d(c,{default:function(){return l}});n(2791);var r="CharPoster_img__Qj3+W",e=n(184),l=function(a){var c=a.img;return(0,e.jsx)("div",{className:"".concat(r," col-11 col-md-6 col-xl-5 m-2"),children:(0,e.jsx)("img",{src:c,alt:"poster",loading:"lazy"})})}}}]);
+//# sourceMappingURL=285.0592c825.chunk.js.map
